@@ -1,0 +1,21 @@
+class solution{
+public:
+    vector<vector<int>> solveQueries(int n, vector<vector<int>> Queries) {
+        // Code here
+        vector<vector<int>> ans(n,vector<int>(n,0));
+    
+        for(int i=0;i<Queries.size();i++){
+            int a=Queries[i][0];
+            int b=Queries[i][1];
+            int c=Queries[i][2];
+            int d=Queries[i][3];
+            for(int j=a;j<=c;j++){
+                 for(int k=b;k<=d;k++){
+                    ans[j][k]++;
+                }    
+            }
+           
+        }
+        return ans;
+    }
+};
